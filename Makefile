@@ -13,8 +13,15 @@ endif
 
 PYTHON := python3
 
+run/all:
+	cd problems
+	for problem in $$(ls -1); do
+		(MAKE) run PROBLEM=$${problem}
+	done
+
 run: env-PROBLEM
-	cd problems/$(PROBLEM) && $(PYTHON) ./main.py
+	cd problems/$(PROBLEM)
+	$(PYTHON) ./main.py
 
 env-%: ## Check for env var
 	if [ -z "$($*)" ]; then \
