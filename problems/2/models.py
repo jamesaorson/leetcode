@@ -11,3 +11,11 @@ class ListNode:
             curr = ListNode(num, prev)
             prev = curr
         return curr
+    
+    def toList(self) -> list[int]:
+        l = []
+        curr = self
+        while curr is not None:
+            l.append(curr.val)
+            curr = curr.next
+        return l
