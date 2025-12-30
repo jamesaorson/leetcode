@@ -13,4 +13,3 @@ class Solution:
             curr_len += 1
         result = max(curr_len, max_len)
         return result
-    
