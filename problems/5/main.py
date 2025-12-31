@@ -15,6 +15,6 @@ if __name__ == "__main__":
     assert (
         Solution().longestPalindrome(
             "cbbd",
-        ) in ["bb"]
+        ) == "bb"
     )
     print(f"[Problem {PROBLEM}] PASS")
