@@ -1,7 +1,9 @@
+# TODO: Fix
 class Solution:
     def isMatch(self, s: str, p: str) -> bool:
         s_index = 0
         prev_c = ''
+        # TODO: Add a lookahead functionality when you see anything BUT a *
         for c in p:
             if s_index >= len(s):
                 return False

@@ -8,6 +8,12 @@ PROBLEM = os.path.basename(__file__)
 if __name__ == "__main__":
     print(f"[Problem {PROBLEM}] START")
     assert (
+        Solution().isMatch(
+            "aab",
+            "c*a*b",
+        )
+    )
+    assert (
         not Solution().isMatch(
             "aa",
             "a"

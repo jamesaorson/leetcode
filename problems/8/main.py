@@ -32,4 +32,9 @@ if __name__ == "__main__":
             "words and 987"
         ) == 0
     )
+    assert (
+        Solution().myAtoi(
+            "-91283472332"
+        ) == -2147483648
+    )
     print(f"[Problem {PROBLEM}] PASS")

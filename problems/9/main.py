@@ -19,7 +19,12 @@ if __name__ == "__main__":
     )
     assert (
         not Solution().isPalindrome(
-            10
+            10,
+        )
+    )
+    assert (
+        Solution().isPalindrome(
+            1001,
         )
     )
     print(f"[Problem {PROBLEM}] PASS")
