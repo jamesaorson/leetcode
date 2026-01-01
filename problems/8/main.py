@@ -9,6 +9,16 @@ if __name__ == "__main__":
     print(f"[Problem {PROBLEM}] START")
     assert (
         Solution().myAtoi(
+            "21474836460",
+        ) == 2147483647
+    )
+    assert (
+        Solution().myAtoi(
+            "-91283472332"
+        ) == -2147483648
+    )
+    assert (
+        Solution().myAtoi(
             "42",
         ) == 42
     )
@@ -31,10 +41,5 @@ if __name__ == "__main__":
         Solution().myAtoi(
             "words and 987"
         ) == 0
-    )
-    assert (
-        Solution().myAtoi(
-            "-91283472332"
-        ) == -2147483648
     )
     print(f"[Problem {PROBLEM}] PASS")
