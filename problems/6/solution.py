@@ -1,24 +1,24 @@
-# TODO: Fix
 class Solution:
     def convert(self, s: str, numRows: int) -> str:
-        if len(s) <= numRows:
-            return s
-        result = ""
-        table = [[] for _ in range(numRows)]
         index = 0
-        while index < len(s):
-            for i, row in enumerate(table):
-                if index + i >= len(s):
+        s_len = len(s)
+        result = [
+            [] for _ in range(numRows)
+        ]
+        while index < s_len:
+            for i in range(numRows):
+                if index >= s_len:
                     break
-                row.append(s[index + i])
-            index += numRows
-            for i in range(1, numRows - 1):
-                row = table[numRows - i - 1]
-                if index >= len(s):
-                    break
-                row.append(s[index + i - 1])
-            index += numRows - 2
-        for row in table:
-            result += ''.join(row)
-        
-        return result
+                result[i].append(s[index])
+                index += 1
+            if index < s_len:
+                for i in range(numRows - 2):
+                    if index >= s_len:
+                        break
+                    j = numRows - 2 - i
+                    result[j].append(s[index])
+                    index += 1
+        result_s = ""
+        return ''.join(
+            ''.join(row) for row in result
+        )
