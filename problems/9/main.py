@@ -9,6 +9,11 @@ if __name__ == "__main__":
     print(f"[Problem {PROBLEM}] START")
     assert (
         Solution().isPalindrome(
+            1001,
+        )
+    )
+    assert (
+        Solution().isPalindrome(
             121,
         )
     )
@@ -22,9 +27,10 @@ if __name__ == "__main__":
             10,
         )
     )
+    
     assert (
         Solution().isPalindrome(
-            1001,
+            0,
         )
     )
     print(f"[Problem {PROBLEM}] PASS")

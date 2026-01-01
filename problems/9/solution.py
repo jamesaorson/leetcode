@@ -1,15 +1,15 @@
-# TODO: Fix
-import math
-
 class Solution:
     def isPalindrome(self, x: int) -> bool:
         if x < 0:
             return False
-        start_place = 10 ** math.floor(math.log10(x))
-        end_place = 10
-        while start_place >= end_place:
-            if x // start_place != x % end_place:
+        if x < 10:
+            return True
+        s = str(x)
+        start = 0
+        end = len(s) - 1
+        while start < end:
+            if s[start] != s[end]:
                 return False
-            start_place /= 10
-            end_place *= 10
+            start += 1
+            end -= 1
         return True
