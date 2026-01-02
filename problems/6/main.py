@@ -9,6 +9,12 @@ if __name__ == "__main__":
     print(f"[Problem {PROBLEM}] START")
     assert (
         Solution().convert(
+            "ABC",
+            1,
+        ) == "ABC"
+    )
+    assert (
+        Solution().convert(
             "AB",
             1,
         ) == "AB"
